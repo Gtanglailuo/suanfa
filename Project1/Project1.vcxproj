@@ -143,12 +143,6 @@
     <ClCompile Include="双向循环链表.cpp" />
     <ClCompile Include="循环链表.cpp" />
     <ClCompile Include="栈.cpp" />
-    <ClCompile Include="蓝桥习题.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="迷宫问题.cpp" />
     <ClCompile Include="链栈.cpp" />
     <ClCompile Include="链表多项式乘法.cpp" />
