@@ -63,6 +63,36 @@ int minDepth(TreeNode * root)
 	}
 	return count;
 }
+//递归法
+/*
+	深度和高度区别的博客文章
+	https://www.cnblogs.com/jianglinliu/p/11197715.html
+*/
+int minDepth1(TreeNode* root)
+{
+	if (root==nullptr)
+	{
+		return 0;
+	}
+	int left = minDepth1(root->left);
+	int right = minDepth1(root->right);
+
+	//为什么判断呢？
+	//注意：如果我的左节点为空，右结点还有值的话，那么我就会返回1，但是我的高度并不是1，而是会在右结点那部分出现
+	//	   所以我就要避免这种情况出现
+	if (root->left ==nullptr && root->right != nullptr)
+	{
+		return 1 + right;
+	}
+	if (root->right==nullptr && root->left != nullptr)
+	{
+		return 1 + left;
+	}
+	return 1 + min(left,right);
+}
+
+
+
 
 
 int main() {
