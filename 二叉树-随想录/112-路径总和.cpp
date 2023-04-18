@@ -1,5 +1,5 @@
 using namespace std;
-#pragma region "Í·ÎÄ¼ş"
+#pragma region "å¤´æ–‡ä»¶"
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -20,21 +20,20 @@ struct TreeNode
 	TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 	TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
-//µü´ú·¨
+//è¿­ä»£æ³•
 /*
 void traversal(TreeNode* cur, vector<int>& path, vector<vector<int>>& result)
 {
 	path.push_back(cur->val);
 	if (cur->left == nullptr && cur->right == nullptr)
 	{
-		//ÎÒÒª´æ×Ö·û´®¶Ô°É£¬ÄÇÃ´ÎÒ¾ÍÒªÓĞ×Ö·û´®£¬¶øÇÒÒª±£Ö¤×îºóÒ»¸ö×Ö·û´®ºóÃæÃ»ÓĞ->
 		result.push_back(path);
 		return;
 	}
 	if (cur->left)
 	{
 		traversal(cur->left, path, result);
-		path.pop_back();//ÎÒÑ§µ½ÁËvectorÀïÃæµÄpop_backº¯Êı,Õâ¸ö½Ğ»ØÍË
+		path.pop_back();//æˆ‘å­¦åˆ°äº†vectoré‡Œé¢çš„pop_backå‡½æ•°,è¿™ä¸ªå«å›é€€
 	}
 	if (cur->right)
 	{
@@ -73,7 +72,7 @@ bool hasPathSum(TreeNode* root, int targetSum)
 	return false;
 }
 */
-//µİ¹é·¨
+//é€’å½’æ³•
 bool findPath(TreeNode* root, int count)
 {
 	if (root==nullptr)
@@ -92,25 +91,25 @@ bool findPath(TreeNode* root, int count)
 	if (root->left!=nullptr)
 	{
 		count -= root->left->val;
-		cout << "×ó --- ÏòÏÂ" << count << endl;
+		cout << "å·¦ --- å‘ä¸‹" << count << endl;
 		if (findPath(root->left, count))
 		{
 			return true;
 		}
-		//Õâ¾ÍÊÇ»ØËİ
+		//è¿™å°±æ˜¯å›æº¯
 		count += root->left->val;
-		cout << "×ó --- ÏòÉÏ" << count << endl;
+		cout << "å·¦ --- å‘ä¸Š" << count << endl;
 	}
 	if (root->right != nullptr)
 	{
 		count -= root->right->val;
-		cout << "ÓÒ --- ÏòÏÂ" << count << endl;
+		cout << "å³ --- å‘ä¸‹" << count << endl;
 		if (findPath(root->right, count))
 		{
 			return true;
 		}
 		count += root->right->val;
-		cout << "ÓÒ --- ÏòÉÏ" << count << endl;
+		cout << "å³ --- å‘ä¸Š" << count << endl;
 	}
 	return false;
 }
@@ -127,7 +126,7 @@ bool hasPathSum(TreeNode* root, int targetSum)
 
 int main()
 {
-	// ´´½¨Ò»¿Ã¶ş²æÊ÷
+	// åˆ›å»ºä¸€æ£µäºŒå‰æ ‘
 	TreeNode* root = new TreeNode(5);
 	TreeNode* node1 = new TreeNode(4);
 	TreeNode* node2 = new TreeNode(8);
@@ -147,16 +146,16 @@ int main()
 	node3->right = node7;
 	node5->right = node8;
 
-	// ²âÊÔÂ·¾¶ºÍÊÇ·ñµÈÓÚ22
+	// æµ‹è¯•è·¯å¾„å’Œæ˜¯å¦ç­‰äº22
 	bool hasPath = hasPathSum(root, 22);
 	if (hasPath) {
-		cout << "´æÔÚÂ·¾¶Ê¹µÃÂ·¾¶ºÍµÈÓÚ22" << endl;
+		cout << "å­˜åœ¨è·¯å¾„ä½¿å¾—è·¯å¾„å’Œç­‰äº22" << endl;
 	}
 	else {
-		cout << "²»´æÔÚÂ·¾¶Ê¹µÃÂ·¾¶ºÍµÈÓÚ22" << endl;
+		cout << "ä¸å­˜åœ¨è·¯å¾„ä½¿å¾—è·¯å¾„å’Œç­‰äº22" << endl;
 	}
 
-	// ÊÍ·ÅÄÚ´æ
+	// é‡Šæ”¾å†…å­˜
 	delete root;
 	delete node1;
 	delete node2;
