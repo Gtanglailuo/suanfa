@@ -158,6 +158,7 @@
     <ClCompile Include="257-二叉树的所有路径.cpp" />
     <ClCompile Include="404-左叶子之和.cpp" />
     <ClCompile Include="513-找数左下角的值.cpp" />
+    <ClCompile Include="654-最大二叉树.cpp" />
     <ClCompile Include="二叉树模板.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
