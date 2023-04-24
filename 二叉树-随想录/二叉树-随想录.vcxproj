@@ -145,6 +145,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="106-根据中序和后序来构造二叉树.cpp" />
     <ClCompile Include="110-平衡二叉树.cpp" />
     <ClCompile Include="111-二叉树的最小深度.cpp" />
     <ClCompile Include="112-路径总和.cpp" />

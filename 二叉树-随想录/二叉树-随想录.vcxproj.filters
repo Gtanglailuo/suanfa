@@ -48,5 +48,8 @@
     <ClCompile Include="112-路径总和.cpp">
       <Filter>源文件\4/17</Filter>
     </ClCompile>
+    <ClCompile Include="106-根据中序和后序来构造二叉树.cpp">
+      <Filter>源文件\4/17</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
