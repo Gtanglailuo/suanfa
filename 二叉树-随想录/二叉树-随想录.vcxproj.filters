@@ -60,5 +60,8 @@
     <ClCompile Include="617-合并二叉树.cpp">
       <Filter>源文件\4/24</Filter>
     </ClCompile>
+    <ClCompile Include="700-二叉搜索数中的搜索.cpp">
+      <Filter>源文件\4/24</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
