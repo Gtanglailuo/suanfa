@@ -1,5 +1,5 @@
 using namespace std;
-#pragma region "Í·ÎÄ¼þ"
+#pragma region "å¤´æ–‡ä»¶"
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -21,29 +21,30 @@ struct TreeNode
 };
 
 
-//×óÖÐÓÒ
+//å·¦ä¸­å³
 /*
-    Ë¼Â·£ºÖÐÐò±éÀú---×óÖÐÓÒ
-    ÏÈ´Ó×ó½Úµã¿ªÊ¼£¬Ò»Â·±éÀúÏÂÈ¥£¬°Ñpre¸ø×î×óÏÂµÄ½áµã£¬È»ºó·è¿ñµÄ»ØÍË½áµã£¬¸ü¸ÄpreµÄÎ»ÖÃ¡£
-    ÔõÃ´»ØÍË£¿
-    if (root == NULL) return true;ÕâÌõÓï¾ä¾ÍÊÇ»ØÍË
+    æ€è·¯ï¼šä¸­åºéåŽ†---å·¦ä¸­å³
+    å…ˆä»Žå·¦èŠ‚ç‚¹å¼€å§‹ï¼Œä¸€è·¯éåŽ†ä¸‹åŽ»ï¼ŒæŠŠpreç»™æœ€å·¦ä¸‹çš„ç»“ç‚¹ï¼Œç„¶åŽç–¯ç‹‚çš„å›žé€€ç»“ç‚¹ï¼Œæ›´æ”¹preçš„ä½ç½®ã€‚
+    æ€Žä¹ˆå›žé€€ï¼Ÿ
+    if (root == NULL) return true;è¿™æ¡è¯­å¥å°±æ˜¯å›žé€€
 
 */
-TreeNode* pre = NULL; // ÓÃÀ´¼ÇÂ¼Ç°Ò»¸ö½Úµã
+TreeNode* pre = NULL; // ç”¨æ¥è®°å½•å‰ä¸€ä¸ªèŠ‚ç‚¹
 bool isValidBST(TreeNode* root) 
 {
     if (root == NULL) return true;
     bool left = isValidBST(root->left);
 
     if (pre != NULL && pre->val >= root->val) return false;
-    pre = root; // ¼ÇÂ¼Ç°Ò»¸ö½Úµã
+    pre = root; // è®°å½•å‰ä¸€ä¸ªèŠ‚ç‚¹
 
     bool right = isValidBST(root->right);
     return left && right;
 }
 int main() 
 {
-    // ´´½¨Ò»¸öºÏ·¨µÄ¶þ²æËÑË÷Ê÷
+	//æµ‹è¯•ç¨‹åº
+    // åˆ›å»ºä¸€ä¸ªåˆæ³•çš„äºŒå‰æœç´¢æ ‘
     TreeNode* rootValid = new TreeNode(4);
     rootValid->left = new TreeNode(2);
     rootValid->right = new TreeNode(6);
