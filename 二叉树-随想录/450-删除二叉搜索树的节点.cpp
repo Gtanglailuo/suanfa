@@ -52,8 +52,6 @@ TreeNode* deleteNode(TreeNode* root, int key)
 			/*
 				找到我要删除的节点，去寻找这个节点的右结点，然后遍历这个右结点的左节点，一直遍历下去
 				找到这个最左边的左节点，然后这个左节点的左边就是要删除的节点的左子树
-			
-			
 			*/
 
 			TreeNode* cur = root->right;
