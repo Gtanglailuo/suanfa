@@ -29,12 +29,14 @@ void func(TreeNode* root, int& min)
 	}
 
 	func(root->left, min);
+	//我把它放在这里是有作用的，判定完之后再更改这个值
 	if (pre != nullptr)
 	{
 		if (min >= abs(root->val - pre->val))
 		{
 			min = abs(root->val - pre->val);
 		}
+
 	}
 	if (pre != nullptr && pre->val >= root->val)
 	{
@@ -44,7 +46,7 @@ void func(TreeNode* root, int& min)
 	{
 		pre = root;
 	}
-
+	//这行代码是用来回调的
 	func(root->right, min);
 
 	return;
