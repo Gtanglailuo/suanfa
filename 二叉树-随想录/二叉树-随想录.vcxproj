@@ -157,6 +157,7 @@
     </ClCompile>
     <ClCompile Include="257-二叉树的所有路径.cpp" />
     <ClCompile Include="404-左叶子之和.cpp" />
+    <ClCompile Include="501-二叉搜索树中的众数.cpp" />
     <ClCompile Include="513-找数左下角的值.cpp" />
     <ClCompile Include="530-二叉搜索树的最小绝对差%28迭代法%29.cpp" />
     <ClCompile Include="530-二叉搜索树的最小绝对差(递归法).cpp" />

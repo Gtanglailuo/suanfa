@@ -75,5 +75,8 @@
     <ClCompile Include="530-二叉搜索树的最小绝对差(递归法).cpp">
       <Filter>源文件\4/24</Filter>
     </ClCompile>
+    <ClCompile Include="501-二叉搜索树中的众数.cpp">
+      <Filter>源文件\4/24</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
