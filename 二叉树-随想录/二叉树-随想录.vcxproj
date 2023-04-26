@@ -155,8 +155,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="236-二叉树最近公共祖先.cpp" />
     <ClCompile Include="257-二叉树的所有路径.cpp" />
     <ClCompile Include="404-左叶子之和.cpp" />
+    <ClCompile Include="450-删除二叉搜索树的节点.cpp" />
     <ClCompile Include="501-二叉搜索树中的众数.cpp" />
     <ClCompile Include="513-找数左下角的值.cpp" />
     <ClCompile Include="530-二叉搜索树的最小绝对差%28迭代法%29.cpp" />
@@ -164,6 +166,7 @@
     <ClCompile Include="617-合并二叉树.cpp" />
     <ClCompile Include="654-最大二叉树.cpp" />
     <ClCompile Include="700-二叉搜索数中的搜索.cpp" />
+    <ClCompile Include="701-二叉搜索树的插入操作.cpp" />
     <ClCompile Include="98-验证二叉搜索树（递归）.cpp" />
     <ClCompile Include="98-验证二叉搜索树（非递归）.cpp" />
     <ClCompile Include="二叉树模板.cpp">

@@ -78,5 +78,14 @@
     <ClCompile Include="501-二叉搜索树中的众数.cpp">
       <Filter>源文件\4/24</Filter>
     </ClCompile>
+    <ClCompile Include="701-二叉搜索树的插入操作.cpp">
+      <Filter>源文件\4/24</Filter>
+    </ClCompile>
+    <ClCompile Include="450-删除二叉搜索树的节点.cpp">
+      <Filter>源文件\4/24</Filter>
+    </ClCompile>
+    <ClCompile Include="236-二叉树最近公共祖先.cpp">
+      <Filter>源文件\4/24</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
