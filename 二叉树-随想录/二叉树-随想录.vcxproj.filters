@@ -87,5 +87,11 @@
     <ClCompile Include="236-二叉树最近公共祖先.cpp">
       <Filter>源文件\4/24</Filter>
     </ClCompile>
+    <ClCompile Include="669-修剪二叉树.cpp">
+      <Filter>源文件\4/24</Filter>
+    </ClCompile>
+    <ClCompile Include="108-将有序数组转换成二叉搜索树.cpp">
+      <Filter>源文件\4/24</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
