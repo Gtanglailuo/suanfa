@@ -23,10 +23,26 @@
 //
 //TreeNode* trimBST(TreeNode* root, int low, int high)
 //{
+//	if (root==nullptr)
+//	{
+//		return nullptr;
+//	}
+//	
+//	if (root->val<low)
+//	{
+//		root->right = trimBST(root->right,low,high);
+//		return root->right;
+//	}
+//	if (root->val>high)
+//	{
+//		root->left = trimBST(root->left,low,high);
+//		return root->left;
+//	}
+//	root->left = trimBST(root->left, low, high);
+//	root->right = trimBST(root->right, low, high);
 //
 //
-//
-//
+//	return root;
 //
 //
 //}

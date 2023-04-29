@@ -1,81 +1,110 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
+
 #include <stdlib.h>
+
+typedef char DataType;
+
+//二叉树结点定义 
+//此处进行二叉树结构定义
+/*-------begin------*/
+//二叉树结点定义 
 struct node
-{//链表结点类型，包含一个存放整型数据的 data 成员，和一个指向下一个结点的next成员
-    int data;
-    struct node* next;
+{
+    DataType data; //存放结点数据 
+    struct node* lchild, * rchild; //左右孩子指针 
 };
+typedef struct  node  BiTree;
+typedef struct  node* ptree;
 
-struct node* mycreateList()
-{//函数功能：创建一个只有一个头结点的空链表，头节点的数据域赋值为0，并将表头结点的地址返回
-    struct node* head = (struct node*)malloc(sizeof(struct node));
-    head->data = 0;
-    head->next = NULL;
-    return head;
+/*-----end---------*/
+
+
+
+void print(DataType d)
+{
+    cout << d << " ";
 }
 
+//初始化二叉树的结点序列
+char treeData[] = "ABC##D##E#F#G##";
 
-void myinsertHead(struct node* head, int insData)
-{
-    /*函数功能：实现在head为表头的链表中使用头插法，插入数据元素insData*/
-    struct node* p;
-    p = (struct node*)malloc(sizeof(struct node));
-    p->data = insData;
-    p->next = head->next;
-    head->next = p;
-}
-
-void myinsertTail(struct node* head, int insData)
-{
-    /*在head为表头的单链表表尾插入数据元素insData*/
-    struct node* p, * q;
-    p = (struct node*)malloc(sizeof(struct node));
-    p->data = insData;
-    p->next = NULL;
-    q = head;
-    while (q->next != NULL)
-        q = q->next;
-    q->next = p;
-}
-
-void myprintList(struct node* L)
-{
-    /*输出head为表头的链表中的数据元素，每输出一个数据空一格*/
-    struct node* p = L->next;
-    while (p)
-    {
-        printf("%d ", p->data);
-        p = p->next;
+/*
+函数名：createBiTree
+函数功能：读取treeData 数组中的字符序列进行二叉树创建二叉树，并返回二叉树的根结点指针
+参数：无
+返回值：二叉树的根结点指针
+*/
+//在此处填入代码
+/*----------begin-------------*/
+ptree createBiTree(char*& p) {
+    char data = *p++;
+    if (data == '#') {
+        return NULL;
     }
+    ptree root = new node();
+    root->data = data;
+    root->lchild = createBiTree(p);
+    root->rchild = createBiTree(p);
+    return root;
 }
-void genNumber(struct node* A, int num)
-{//本函数用于接收输入的大数的各个位，返回大数链表表头，可使用上面已实现的链表插入函数
-/*------begin---------*/
-    int i, n;
-    for (i = 0; i < num; i++)
+
+ptree createBiTree() {
+    char* p = treeData;
+    return createBiTree(p);
+}
+
+
+/*----------end-------------*/
+
+void Sibling(BiTree* T)
+{
+    //在此处填入代码,输出结点T的所有兄弟姐妹
+     /*----------begin-------------*/
+    if (T==NULL)
     {
-        scanf("%d", &n);
-        myinsertHead(A, n);
+        return;
     }
-/*------end---------*/
+    cout << T->data << " ";
+    Sibling(T->lchild);
+    Sibling(T->rchild);
+
+     /*----------end-------------*/
 }
 
-struct node* addNumber(struct node* A, struct node* B)
+/*
+函数名：preOrder
+函数功能：先根遍历二叉树 ，并找到值为ch的结点指针
+参数：根结点指针 BiTree *T  ,需查找的结点值 ch
+返回值：无
+*/
+
+//在此处填入代码,利用先序遍历，找到结点值ch后调用函数sibling输出该结点的所有兄弟姐妹，以空格分界
+ /*----------begin-------------*/
+void preOrder(BiTree*T,char ch)
 {
-    //此处实现函数求两数相加，并返回和值链表的表头；
-    /*------begin---------*/
-    
 
-
-  /*------end---------*/
+    if (T==NULL)
+    {
+        return;
+    }
+    if (T->data==ch)
+    {
+        Sibling(T); 
+    }
+    preOrder(T->lchild,ch);
+    preOrder(T->rchild, ch);
 }
-int main() 
+ /*----------end-------------*/
+
+int main(void)
 {
+    BiTree* T;
+    T = createBiTree(); //创建二叉树
 
+    char ch;
+    cin >> ch; //输入某人的代号
+    preOrder(T, ch); //调用函数输出ch的所有兄弟姐妹
 
-
-
-
-    return 0;
-
+    return 1;
 }

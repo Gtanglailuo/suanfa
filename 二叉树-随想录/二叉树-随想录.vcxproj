@@ -166,7 +166,12 @@
     <ClCompile Include="530-二叉搜索树的最小绝对差(递归法).cpp" />
     <ClCompile Include="617-合并二叉树.cpp" />
     <ClCompile Include="654-最大二叉树.cpp" />
-    <ClCompile Include="669-修剪二叉树.cpp" />
+    <ClCompile Include="669-修剪二叉树.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="700-二叉搜索数中的搜索.cpp" />
     <ClCompile Include="701-二叉搜索树的插入操作.cpp" />
     <ClCompile Include="98-验证二叉搜索树（递归）.cpp" />
