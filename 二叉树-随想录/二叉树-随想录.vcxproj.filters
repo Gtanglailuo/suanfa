@@ -93,5 +93,8 @@
     <ClCompile Include="108-将有序数组转换成二叉搜索树.cpp">
       <Filter>源文件\4/24</Filter>
     </ClCompile>
+    <ClCompile Include="538-将二叉搜索树转换成累加树.cpp">
+      <Filter>源文件\4/24</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

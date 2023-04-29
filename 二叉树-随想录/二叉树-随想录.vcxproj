@@ -164,6 +164,7 @@
     <ClCompile Include="513-找数左下角的值.cpp" />
     <ClCompile Include="530-二叉搜索树的最小绝对差%28迭代法%29.cpp" />
     <ClCompile Include="530-二叉搜索树的最小绝对差(递归法).cpp" />
+    <ClCompile Include="538-将二叉搜索树转换成累加树.cpp" />
     <ClCompile Include="617-合并二叉树.cpp" />
     <ClCompile Include="654-最大二叉树.cpp" />
     <ClCompile Include="669-修剪二叉树.cpp">
