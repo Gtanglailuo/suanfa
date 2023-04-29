@@ -57,19 +57,19 @@ ptree createBiTree() {
 
 /*----------end-------------*/
 
-void Sibling(BiTree* T)
+void Sibling(ptree T)
 {
-    //在此处填入代码,输出结点T的所有兄弟姐妹
-     /*----------begin-------------*/
-    if (T==NULL)
-    {
-        return;
+    if (!T) return;
+    while (T->lchild || T->rchild) {
+        if (T->rchild) {
+            cout << T->rchild->data << " ";
+            T = T->rchild;
+        }
+        else {
+            cout << T->lchild->data << " ";
+            T = T->lchild;
+        }
     }
-    cout << T->data << " ";
-    Sibling(T->lchild);
-    Sibling(T->rchild);
-
-     /*----------end-------------*/
 }
 
 /*
