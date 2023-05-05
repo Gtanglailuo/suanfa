@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="第三章">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="第四章">
+      <UniqueIdentifier>{241c11b7-98d7-492a-b1f6-9d0185522f27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="第五章">
+      <UniqueIdentifier>{9288666c-2f0e-418f-8b41-eab487a3e1a4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="3-5.cpp">
+      <Filter>第三章</Filter>
+    </ClCompile>
+    <ClCompile Include="3-6.cpp">
+      <Filter>第三章</Filter>
+    </ClCompile>
+    <ClCompile Include="4-2.cpp">
+      <Filter>第四章</Filter>
+    </ClCompile>
+    <ClCompile Include="4-3.cpp">
+      <Filter>第四章</Filter>
+    </ClCompile>
+    <ClCompile Include="5-4.cpp">
+      <Filter>第五章</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
